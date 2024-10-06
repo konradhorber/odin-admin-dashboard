@@ -55,12 +55,17 @@
 /* site-wide settings */
 * {
     font-family: Roboto, Arial, sans-serif;
+    color: #292933;
+}
+
+h1 {
+    color: #004480;
 }
 
 /* basic structure */
 .container {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 250px 1fr;
     height: 100vh;
     width: 100vw
 }
@@ -83,6 +88,11 @@
 
 #dashboard-icon {
     height: 50px;
+    filter: invert(13%) sepia(81%) saturate(3816%) hue-rotate(196deg) brightness(90%) contrast(101%);
+}
+
+.dashboard>h1 {
+    color: #292933;
 }
 
 .sidebar-item {
@@ -100,6 +110,76 @@
 }
 
 /* header */
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+    gap: 20px;
+}
+
+/* header>header-menu */
+.header-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search-bar {
+    width: clamp(12rem, 30vw, 40rem);
+    display: flex;
+    align-items: center;    
+    background-color: #E6E6E8;
+    border-radius: 25px;
+    padding-left: 1rem;
+    margin-top: 1.7rem;
+}
+
+
+.header-menu-menu {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.7rem;
+}
+
+#bell-ring {
+    margin-right: 1rem;
+}
+
+#magnify, #bell-ring {
+    height: 32px;
+}
+
+/* header>header-main */
+.header-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.user-welcome {
+    padding-left: 1rem;
+}
+
+.header-main-button-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-main-button {
+    background-color: #004480;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    margin: 0.8rem;
+    border-radius: 25px;
+}
+
+.header-main-button>h3 {
+    color: white;
+}
 
 
 /* content */
@@ -121,6 +201,38 @@
 /* projects */
 .projects  {
     grid-area: projects;
+}
+
+.projects > .content-header {
+    padding-left: 1rem;
+}
+
+.content-header {
+    padding-top: 1rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.card-line {
+    border-left: 0.8rem solid #004480;
+    height: 100%;
+}
+
+.text {
+    padding: 1rem;
 }
 
 /* announcements */
